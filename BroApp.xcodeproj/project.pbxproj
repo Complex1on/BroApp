@@ -3,27 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B065EE8BFB54C9748E50674 /* Pods_BroApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61137085CBBB4BF1BD1CB2DC /* Pods_BroApp.framework */; };
 		72E88F4924AFD63000D462A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F4824AFD63000D462A4 /* AppDelegate.swift */; };
 		72E88F4B24AFD63000D462A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F4A24AFD63000D462A4 /* SceneDelegate.swift */; };
-		72E88F4D24AFD63000D462A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F4C24AFD63000D462A4 /* ViewController.swift */; };
 		72E88F5024AFD63000D462A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72E88F4E24AFD63000D462A4 /* Main.storyboard */; };
 		72E88F5224AFD63200D462A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E88F5124AFD63200D462A4 /* Assets.xcassets */; };
 		72E88F5524AFD63200D462A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72E88F5324AFD63200D462A4 /* LaunchScreen.storyboard */; };
+		72E88F6124AFDA7E00D462A4 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F5F24AFDA7E00D462A4 /* MessageCell.swift */; };
+		72E88F6224AFDA7E00D462A4 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E88F6024AFDA7E00D462A4 /* MessageCell.xib */; };
+		72E88F6524AFE92400D462A4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F6424AFE92400D462A4 /* WelcomeViewController.swift */; };
+		72E88F6724AFE93D00D462A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F6624AFE93D00D462A4 /* Constants.swift */; };
+		72E88F6924AFEA1A00D462A4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F6824AFEA1A00D462A4 /* RegisterViewController.swift */; };
+		72E88F6B24AFEACB00D462A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72E88F6A24AFEACA00D462A4 /* GoogleService-Info.plist */; };
+		72E88F6D24AFEB5800D462A4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F6C24AFEB5800D462A4 /* Message.swift */; };
+		72E88F6F24AFEB7100D462A4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F6E24AFEB7100D462A4 /* LoginViewController.swift */; };
+		72E88F7124AFEB7E00D462A4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F7024AFEB7E00D462A4 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61137085CBBB4BF1BD1CB2DC /* Pods_BroApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BroApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E88F4524AFD63000D462A4 /* BroApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BroApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E88F4824AFD63000D462A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72E88F4A24AFD63000D462A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		72E88F4C24AFD63000D462A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		72E88F4F24AFD63000D462A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72E88F5124AFD63200D462A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72E88F5424AFD63200D462A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72E88F5624AFD63200D462A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72E88F5F24AFDA7E00D462A4 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		72E88F6024AFDA7E00D462A4 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		72E88F6424AFE92400D462A4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		72E88F6624AFE93D00D462A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		72E88F6824AFEA1A00D462A4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		72E88F6A24AFEACA00D462A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		72E88F6C24AFEB5800D462A4 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		72E88F6E24AFEB7100D462A4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		72E88F7024AFEB7E00D462A4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		BDE6DCC7D7F338CF69BA4481 /* Pods-BroApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BroApp.release.xcconfig"; path = "Target Support Files/Pods-BroApp/Pods-BroApp.release.xcconfig"; sourceTree = "<group>"; };
+		D17B8D43D6D7011BD40AEBFD /* Pods-BroApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BroApp.debug.xcconfig"; path = "Target Support Files/Pods-BroApp/Pods-BroApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B065EE8BFB54C9748E50674 /* Pods_BroApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +63,8 @@
 			children = (
 				72E88F4724AFD63000D462A4 /* BroApp */,
 				72E88F4624AFD63000D462A4 /* Products */,
+				F0149A1821428540D9036B33 /* Pods */,
+				7DF3B8E9AF852334A30A6425 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +81,62 @@
 			children = (
 				72E88F4824AFD63000D462A4 /* AppDelegate.swift */,
 				72E88F4A24AFD63000D462A4 /* SceneDelegate.swift */,
-				72E88F4C24AFD63000D462A4 /* ViewController.swift */,
-				72E88F4E24AFD63000D462A4 /* Main.storyboard */,
+				72E88F5E24AFD93B00D462A4 /* Model */,
+				72E88F5D24AFD92900D462A4 /* Controllers */,
+				72E88F5C24AFD91400D462A4 /* Views */,
 				72E88F5124AFD63200D462A4 /* Assets.xcassets */,
 				72E88F5324AFD63200D462A4 /* LaunchScreen.storyboard */,
 				72E88F5624AFD63200D462A4 /* Info.plist */,
+				72E88F6A24AFEACA00D462A4 /* GoogleService-Info.plist */,
+				72E88F6624AFE93D00D462A4 /* Constants.swift */,
 			);
 			path = BroApp;
+			sourceTree = "<group>";
+		};
+		72E88F5C24AFD91400D462A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				72E88F4E24AFD63000D462A4 /* Main.storyboard */,
+				72E88F5F24AFDA7E00D462A4 /* MessageCell.swift */,
+				72E88F6024AFDA7E00D462A4 /* MessageCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		72E88F5D24AFD92900D462A4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				72E88F6424AFE92400D462A4 /* WelcomeViewController.swift */,
+				72E88F6824AFEA1A00D462A4 /* RegisterViewController.swift */,
+				72E88F6E24AFEB7100D462A4 /* LoginViewController.swift */,
+				72E88F7024AFEB7E00D462A4 /* ChatViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		72E88F5E24AFD93B00D462A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				72E88F6C24AFEB5800D462A4 /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7DF3B8E9AF852334A30A6425 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61137085CBBB4BF1BD1CB2DC /* Pods_BroApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0149A1821428540D9036B33 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D17B8D43D6D7011BD40AEBFD /* Pods-BroApp.debug.xcconfig */,
+				BDE6DCC7D7F338CF69BA4481 /* Pods-BroApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72E88F5924AFD63200D462A4 /* Build configuration list for PBXNativeTarget "BroApp" */;
 			buildPhases = (
+				72FC958260322A43921CAAA2 /* [CP] Check Pods Manifest.lock */,
 				72E88F4124AFD63000D462A4 /* Sources */,
 				72E88F4224AFD63000D462A4 /* Frameworks */,
 				72E88F4324AFD63000D462A4 /* Resources */,
+				A72234C181ED4A8C133B98B8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +200,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				72E88F5524AFD63200D462A4 /* LaunchScreen.storyboard in Resources */,
+				72E88F6224AFDA7E00D462A4 /* MessageCell.xib in Resources */,
+				72E88F6B24AFEACB00D462A4 /* GoogleService-Info.plist in Resources */,
 				72E88F5224AFD63200D462A4 /* Assets.xcassets in Resources */,
 				72E88F5024AFD63000D462A4 /* Main.storyboard in Resources */,
 			);
@@ -133,14 +209,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		72FC958260322A43921CAAA2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BroApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A72234C181ED4A8C133B98B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BroApp/Pods-BroApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BroApp/Pods-BroApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BroApp/Pods-BroApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		72E88F4124AFD63000D462A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72E88F4D24AFD63000D462A4 /* ViewController.swift in Sources */,
+				72E88F6724AFE93D00D462A4 /* Constants.swift in Sources */,
+				72E88F6124AFDA7E00D462A4 /* MessageCell.swift in Sources */,
+				72E88F6524AFE92400D462A4 /* WelcomeViewController.swift in Sources */,
+				72E88F6924AFEA1A00D462A4 /* RegisterViewController.swift in Sources */,
+				72E88F6F24AFEB7100D462A4 /* LoginViewController.swift in Sources */,
 				72E88F4924AFD63000D462A4 /* AppDelegate.swift in Sources */,
 				72E88F4B24AFD63000D462A4 /* SceneDelegate.swift in Sources */,
+				72E88F7124AFEB7E00D462A4 /* ChatViewController.swift in Sources */,
+				72E88F6D24AFEB5800D462A4 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +406,7 @@
 		};
 		72E88F5A24AFD63200D462A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D17B8D43D6D7011BD40AEBFD /* Pods-BroApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +425,7 @@
 		};
 		72E88F5B24AFD63200D462A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDE6DCC7D7F338CF69BA4481 /* Pods-BroApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

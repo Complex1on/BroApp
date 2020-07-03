@@ -1,0 +1,6 @@
+framework module Pods_BroApp {
+  umbrella header "Pods-BroApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
