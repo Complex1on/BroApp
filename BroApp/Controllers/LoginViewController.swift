@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
                     print(e)
                     self.errorLabel.text = e.localizedDescription
                 } else {
-                    self.performSegue(withIdentifier: K.loginSegue, sender: self)
+                    self.performSegue(withIdentifier: K.loginHomeSegue, sender: self)
                 }
             }
         }

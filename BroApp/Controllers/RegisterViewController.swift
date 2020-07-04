@@ -11,6 +11,7 @@ import Firebase
 
 class RegisterViewController: UIViewController {
 
+    @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var ErrorLabel: UILabel!
@@ -22,8 +23,8 @@ class RegisterViewController: UIViewController {
                     print(e.localizedDescription)
                     self.ErrorLabel.text = e.localizedDescription
                 } else {
-                    // Navigate to ChatViewController
-                    self.performSegue(withIdentifier: K.registerSegue, sender: self)
+                    // Navigate to HomeViewController
+                    self.performSegue(withIdentifier: K.registerHomeSegue, sender: self)
                 }
             }
         }
