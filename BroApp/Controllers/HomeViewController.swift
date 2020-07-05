@@ -7,10 +7,32 @@
 //
 
 import UIKit
+import Firebase
+
 
 class HomeViewController: UIViewController {
+    let db = Firestore.firestore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //TESTING QUERYING FOR A DIFFERENT USER
+        db.collection("Users").whereField("Username", isEqualTo: "Test username")
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    if let snapshotDocuments = querySnapshot?.documents {
+                        for doc in snapshotDocuments{
+                            let data = doc.data()
+                            let id = doc.documentID
+                            print(id)
+                            print(data)
+                            
+                        }
+                    }
+                }
+        }
     }
     @IBAction func friendsButtonPushed(_ sender: UIButton) {
     }

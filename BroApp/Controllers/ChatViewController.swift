@@ -24,10 +24,10 @@ class ChatViewController: UIViewController {
         title = K.appName
         navigationItem.hidesBackButton = true
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
-        
+        messageTextfield.isUserInteractionEnabled = false
         loadMessages()
     }
-    
+    //MARK: - Load Messages from db
     func loadMessages() {
         
         db.collection(K.FStore.collectionName)
@@ -59,8 +59,11 @@ class ChatViewController: UIViewController {
         }
     }
     
+    //MARK: - Bottom Section Buttons
+    @IBAction func broButtonPushed(_ sender: UIButton) {
+        messageTextfield!.text! += "Bro! "
+    }
     @IBAction func sendPressed(_ sender: UIButton) {
-        
         if let messageBody = messageTextfield.text ,let messageSender = Auth.auth().currentUser?.email{
             db.collection(K.FStore.collectionName).addDocument(data: [K.FStore.senderField: messageSender,
                                                                       K.FStore.bodyField: messageBody,
@@ -89,6 +92,7 @@ class ChatViewController: UIViewController {
     
 }
 
+//MARK: - tableview controller data source methods
 extension ChatViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count

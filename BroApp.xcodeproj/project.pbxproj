@@ -23,6 +23,7 @@
 		72E88F6F24AFEB7100D462A4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F6E24AFEB7100D462A4 /* LoginViewController.swift */; };
 		72E88F7124AFEB7E00D462A4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F7024AFEB7E00D462A4 /* ChatViewController.swift */; };
 		72E88F7324B1187300D462A4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F7224B1187300D462A4 /* HomeViewController.swift */; };
+		72E88F7524B199A400D462A4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F7424B199A400D462A4 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		72E88F6E24AFEB7100D462A4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		72E88F7024AFEB7E00D462A4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		72E88F7224B1187300D462A4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		72E88F7424B199A400D462A4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BDE6DCC7D7F338CF69BA4481 /* Pods-BroApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BroApp.release.xcconfig"; path = "Target Support Files/Pods-BroApp/Pods-BroApp.release.xcconfig"; sourceTree = "<group>"; };
 		D17B8D43D6D7011BD40AEBFD /* Pods-BroApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BroApp.debug.xcconfig"; path = "Target Support Files/Pods-BroApp/Pods-BroApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,8 +113,8 @@
 				72E88F6424AFE92400D462A4 /* WelcomeViewController.swift */,
 				72E88F6824AFEA1A00D462A4 /* RegisterViewController.swift */,
 				72E88F6E24AFEB7100D462A4 /* LoginViewController.swift */,
-				72E88F7024AFEB7E00D462A4 /* ChatViewController.swift */,
 				72E88F7224B1187300D462A4 /* HomeViewController.swift */,
+				72E88F7024AFEB7E00D462A4 /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				72E88F6C24AFEB5800D462A4 /* Message.swift */,
+				72E88F7424B199A400D462A4 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				72E88F4B24AFD63000D462A4 /* SceneDelegate.swift in Sources */,
 				72E88F7124AFEB7E00D462A4 /* ChatViewController.swift in Sources */,
 				72E88F6D24AFEB5800D462A4 /* Message.swift in Sources */,
+				72E88F7524B199A400D462A4 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="jj1-9l-LFM" customClass="WelcomeViewController" customModule="BroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iv0-GZ-6FR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmI-r5-KZh">
@@ -84,7 +84,7 @@
             <objects>
                 <viewController id="ffs-tJ-OMi" customClass="HomeViewController" customModule="BroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7GZ-VV-SeB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="80" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lzP-Jg-fXl">
@@ -157,7 +157,7 @@
             <objects>
                 <viewController id="sXM-Lu-4Ei" customClass="RegisterViewController" customModule="BroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0xS-kT-eGT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNd-w0-CgW">
@@ -274,7 +274,7 @@
                         <outlet property="ErrorLabel" destination="clb-71-EQb" id="Ij9-s5-kRA"/>
                         <outlet property="emailTextfield" destination="s7P-zb-4SR" id="vs0-ep-nQM"/>
                         <outlet property="passwordTextfield" destination="Loh-7r-XZ8" id="sWO-dB-e3e"/>
-                        <outlet property="usernameTextField" destination="DDp-Sa-Udl" id="UfT-uY-9N6"/>
+                        <outlet property="usernameTextField" destination="DDp-Sa-Udl" id="fUw-U7-FEs"/>
                         <segue destination="ffs-tJ-OMi" kind="show" identifier="RegisterToHome" id="STt-Ts-1Ys"/>
                     </connections>
                 </viewController>
@@ -287,7 +287,7 @@
             <objects>
                 <viewController id="czi-kn-rVR" customClass="LoginViewController" customModule="BroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RxP-z5-QK8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbN-4z-1Tg" userLabel="EmailView">
@@ -393,7 +393,7 @@
             <objects>
                 <viewController id="DYe-r8-i9r" customClass="ChatViewController" customModule="BroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="15V-df-maf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="npE-mn-gPd">
@@ -414,6 +414,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6Q-pQ-alF">
                                         <rect key="frame" x="354" y="20" width="40" height="40"/>
+                                        <color key="backgroundColor" name="BrandBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="But-R8-ckc"/>
                                             <constraint firstAttribute="width" constant="40" id="SWp-zs-57s"/>
@@ -426,12 +427,91 @@
                                             <action selector="sendPressed:" destination="DYe-r8-i9r" eventType="touchUpInside" id="whQ-Rz-599"/>
                                         </connections>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U8t-L3-fgX">
+                                        <rect key="frame" x="20" y="76" width="374" height="82"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNt-Io-q5E">
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="82"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pa2-Dv-5xO">
+                                                        <rect key="frame" x="25" y="17" width="84" height="45"/>
+                                                        <color key="backgroundColor" name="BrandBlue"/>
+                                                        <state key="normal" title="Bro!">
+                                                            <color key="titleColor" name="BrandLightPurple"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="broButtonPushed:" destination="DYe-r8-i9r" eventType="touchUpInside" id="ebu-JZ-me3"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" name="BrandLightBlue"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="pa2-Dv-5xO" secondAttribute="bottom" constant="20" id="5se-kZ-yiF"/>
+                                                    <constraint firstItem="pa2-Dv-5xO" firstAttribute="leading" secondItem="GNt-Io-q5E" secondAttribute="leading" constant="25" id="BNb-3o-d0i"/>
+                                                    <constraint firstAttribute="trailing" secondItem="pa2-Dv-5xO" secondAttribute="trailing" constant="19" id="Qcy-qa-JdW"/>
+                                                    <constraint firstItem="pa2-Dv-5xO" firstAttribute="top" secondItem="GNt-Io-q5E" secondAttribute="top" constant="17" id="wIp-85-V8L"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKE-xY-x1F">
+                                                <rect key="frame" x="128" y="0.0" width="118" height="82"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzr-be-HfU">
+                                                        <rect key="frame" x="25" y="17" width="75" height="45"/>
+                                                        <color key="backgroundColor" name="BrandBlue"/>
+                                                        <state key="normal" title="Bro!">
+                                                            <color key="titleColor" name="BrandLightPurple"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="broButtonPushed:" destination="DYe-r8-i9r" eventType="touchUpInside" id="iyx-MH-wY9"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" name="BrandLightBlue"/>
+                                                <constraints>
+                                                    <constraint firstItem="Mzr-be-HfU" firstAttribute="leading" secondItem="NKE-xY-x1F" secondAttribute="leading" constant="25" id="55X-gE-TYJ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Mzr-be-HfU" secondAttribute="bottom" constant="20" id="Ali-hc-vBN"/>
+                                                    <constraint firstItem="Mzr-be-HfU" firstAttribute="top" secondItem="NKE-xY-x1F" secondAttribute="top" constant="17" id="TFR-0z-0PC"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Mzr-be-HfU" secondAttribute="trailing" constant="18" id="olL-9P-5h0"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2y-ve-gkZ">
+                                                <rect key="frame" x="246" y="0.0" width="128" height="82"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQc-wa-veH">
+                                                        <rect key="frame" x="25" y="17" width="84" height="45"/>
+                                                        <color key="backgroundColor" name="BrandBlue"/>
+                                                        <state key="normal" title="Bro!">
+                                                            <color key="titleColor" name="BrandLightPurple"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="broButtonPushed:" destination="DYe-r8-i9r" eventType="touchUpInside" id="PIa-NQ-nNp"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" name="BrandLightBlue"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="EQc-wa-veH" secondAttribute="trailing" constant="19" id="4cE-cr-3Ad"/>
+                                                    <constraint firstItem="EQc-wa-veH" firstAttribute="leading" secondItem="p2y-ve-gkZ" secondAttribute="leading" constant="25" id="O83-8E-nEy"/>
+                                                    <constraint firstItem="EQc-wa-veH" firstAttribute="top" secondItem="p2y-ve-gkZ" secondAttribute="top" constant="17" id="fBo-2F-oLY"/>
+                                                    <constraint firstAttribute="bottom" secondItem="EQc-wa-veH" secondAttribute="bottom" constant="20" id="qGo-hF-xNh"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="NKE-xY-x1F" firstAttribute="centerX" secondItem="U8t-L3-fgX" secondAttribute="centerX" id="B8a-Qv-K4W"/>
+                                            <constraint firstItem="NKE-xY-x1F" firstAttribute="leading" secondItem="U8t-L3-fgX" secondAttribute="leading" constant="128" id="Lr5-La-v5v"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" name="BrandPurple"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="R6Q-pQ-alF" secondAttribute="trailing" constant="20" id="JjE-0I-v0c"/>
                                     <constraint firstItem="R6Q-pQ-alF" firstAttribute="top" secondItem="gbY-Jc-Auj" secondAttribute="top" constant="20" id="OEb-XH-apH"/>
+                                    <constraint firstAttribute="trailing" secondItem="U8t-L3-fgX" secondAttribute="trailing" constant="20" id="QQB-yO-2Fp"/>
+                                    <constraint firstItem="U8t-L3-fgX" firstAttribute="top" secondItem="YR4-oO-7Da" secondAttribute="bottom" constant="16" id="kXx-60-MXr"/>
+                                    <constraint firstItem="U8t-L3-fgX" firstAttribute="leading" secondItem="gbY-Jc-Auj" secondAttribute="leading" constant="20" id="mKw-FE-QpS"/>
                                     <constraint firstAttribute="height" constant="166" id="n8Y-FG-A0T"/>
+                                    <constraint firstAttribute="bottom" secondItem="U8t-L3-fgX" secondAttribute="bottom" constant="8" id="npj-w4-xSV"/>
                                     <constraint firstItem="R6Q-pQ-alF" firstAttribute="leading" secondItem="YR4-oO-7Da" secondAttribute="trailing" constant="20" id="oei-bC-p3s"/>
                                     <constraint firstItem="YR4-oO-7Da" firstAttribute="top" secondItem="gbY-Jc-Auj" secondAttribute="top" constant="20" id="rpN-E8-X9t"/>
                                     <constraint firstItem="YR4-oO-7Da" firstAttribute="leading" secondItem="gbY-Jc-Auj" secondAttribute="leading" constant="20" id="sqh-4g-63P"/>

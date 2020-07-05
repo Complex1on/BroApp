@@ -9,11 +9,14 @@
 import UIKit
 import Firebase
 
-class RegisterViewController: UIViewController {
 
-    @IBOutlet weak var usernameTextField: UITextField!
+
+class RegisterViewController: UIViewController {
+    let db = Firestore.firestore()
+    
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var ErrorLabel: UILabel!
     
     @IBAction func registerPressed(_ sender: UIButton) {
@@ -24,6 +27,13 @@ class RegisterViewController: UIViewController {
                     self.ErrorLabel.text = e.localizedDescription
                 } else {
                     // Navigate to HomeViewController
+                    if let user = Auth.auth().currentUser?.uid {
+                        // take out email later
+                        // since you can get email from Auth.auth()
+                        self.db.collection("Users").document(user).setData(["Username": self.usernameTextField.text ?? "No Username", "uid": user])
+                            //.addDocument(data: )
+                    }
+                    
                     self.performSegue(withIdentifier: K.registerHomeSegue, sender: self)
                 }
             }
