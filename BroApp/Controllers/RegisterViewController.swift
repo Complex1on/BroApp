@@ -19,6 +19,9 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var ErrorLabel: UILabel!
     
+    let friends: [String] = []
+    let friendRequests: [String] = []
+    
     @IBAction func registerPressed(_ sender: UIButton) {
         if let email = emailTextfield.text, let password = passwordTextfield.text {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
@@ -27,11 +30,16 @@ class RegisterViewController: UIViewController {
                     self.ErrorLabel.text = e.localizedDescription
                 } else {
                     // Navigate to HomeViewController
+                    
                     if let user = Auth.auth().currentUser?.uid {
                         // take out email later
                         // since you can get email from Auth.auth()
-                        self.db.collection("Users").document(user).setData(["Username": self.usernameTextField.text ?? "No Username", "uid": user])
-                            //.addDocument(data: )
+                        self.db.collection("Users").document(user).setData([
+                            K.FStoreUser.Username: self.usernameTextField.text ?? "No Username",
+                            K.FStoreUser.email: Auth.auth().currentUser?.email ?? "No Email",
+                            K.FStoreUser.uid: user,
+                            K.FStoreUser.friends: self.friends,
+                            K.FStoreUser.friendRequests: self.friendRequests])
                     }
                     
                     self.performSegue(withIdentifier: K.registerHomeSegue, sender: self)

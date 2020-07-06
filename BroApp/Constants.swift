@@ -14,7 +14,7 @@ struct K {
     static let registerHomeSegue = "RegisterToHome"
     static let loginHomeSegue = "LoginToHome"
     static let homeChatSegue = "HomeToChat"
-    
+    static let homeFriends = "HomeToFriends"
     struct BrandColors {
         static let purple = "BrandPurple"
         static let lightPurple = "BrandLightPurple"
@@ -27,5 +27,13 @@ struct K {
         static let senderField = "sender"
         static let bodyField = "body"
         static let dateField = "date"
+    }
+    
+    struct FStoreUser {
+        static let Username = "Username"
+        static let email = "Email"
+        static let uid = "uid"
+        static let friends = "Friends"
+        static let friendRequests = "FriendRequests"
     }
 }

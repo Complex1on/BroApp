@@ -11,4 +11,6 @@ import Foundation
 struct User {
     let email: String
     let username: String
+    let friends: [String]
+    let friendRequests: [String]
 }

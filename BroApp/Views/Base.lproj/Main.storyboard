@@ -143,14 +143,53 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vTR-3P-keH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zga-yL-O30"/>
+                    <navigationItem key="navigationItem" id="zga-yL-O30">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="geK-U4-Rp5">
+                            <connections>
+                                <action selector="logoutButtonPressed:" destination="ffs-tJ-OMi" id="q1Y-DB-wlc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="DYe-r8-i9r" kind="show" identifier="HomeToChat" id="rGh-B2-8UN"/>
+                        <segue destination="g0Y-qt-dFg" kind="show" identifier="HomeToFriends" id="w6A-ig-4Ay"/>
+                        <segue destination="z2J-cX-3bs" kind="show" identifier="HomeToFriendRequest" id="KvE-G0-IlA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mrx-Fd-Bx3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2873.913043478261" y="-25.446428571428569"/>
+            <point key="canvasLocation" x="3014" y="64"/>
+        </scene>
+        <!--Friends Table View Controller-->
+        <scene sceneID="oaf-By-neN">
+            <objects>
+                <tableViewController id="g0Y-qt-dFg" customClass="FriendsTableViewController" customModule="BroApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FHi-eh-ahl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" id="ucD-g7-Avt">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ucD-g7-Avt" id="vlb-ob-vhs">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="g0Y-qt-dFg" id="uk3-V8-qLj"/>
+                            <outlet property="delegate" destination="g0Y-qt-dFg" id="W0g-uK-qwI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="mdA-WY-tgG">
+                        <barButtonItem key="rightBarButtonItem" title="Add Friends" id="B6G-wy-1cA"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ih4-cl-y5F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4658" y="-263"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="3Ym-Je-GU9">
@@ -544,7 +583,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cBm-qO-X0r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3892.753623188406" y="134.59821428571428"/>
+            <point key="canvasLocation" x="3013" y="1189"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dZ3-Cl-rtU">
@@ -569,6 +608,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0k8-Vf-9CG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-86.956521739130437" y="134.59821428571428"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Dpl-dg-W8W">
+            <objects>
+                <tableViewController id="z2J-cX-3bs" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5yf-vl-Ywk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendRequestCell" id="Dwh-UR-lB1">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dwh-UR-lB1" id="OZu-L3-ntd">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="z2J-cX-3bs" id="YBU-XZ-fCC"/>
+                            <outlet property="delegate" destination="z2J-cX-3bs" id="w0I-1z-cmq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="td3-oE-W2t"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yVY-XC-2pz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4658" y="535"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
