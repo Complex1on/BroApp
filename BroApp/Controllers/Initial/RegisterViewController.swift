@@ -32,8 +32,6 @@ class RegisterViewController: UIViewController {
                     // Navigate to HomeViewController
                     
                     if let user = Auth.auth().currentUser?.uid {
-                        // take out email later
-                        // since you can get email from Auth.auth()
                         self.db.collection("Users").document(user).setData([
                             K.FStoreUser.Username: self.usernameTextField.text ?? "No Username",
                             K.FStoreUser.email: Auth.auth().currentUser?.email ?? "No Email",

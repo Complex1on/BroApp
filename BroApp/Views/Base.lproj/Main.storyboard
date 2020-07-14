@@ -636,7 +636,13 @@
                             <outlet property="delegate" destination="z2J-cX-3bs" id="w0I-1z-cmq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Friend Requests" id="td3-oE-W2t"/>
+                    <navigationItem key="navigationItem" title="Friend Requests" id="td3-oE-W2t">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="FVi-HA-2MS">
+                            <connections>
+                                <action selector="helpButtonPressed:" destination="z2J-cX-3bs" id="N1n-7P-kFA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yVY-XC-2pz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
