@@ -20,7 +20,6 @@
 		72E88F6524AFE92400D462A4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F6424AFE92400D462A4 /* WelcomeViewController.swift */; };
 		72E88F6724AFE93D00D462A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F6624AFE93D00D462A4 /* Constants.swift */; };
 		72E88F6924AFEA1A00D462A4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F6824AFEA1A00D462A4 /* RegisterViewController.swift */; };
-		72E88F6B24AFEACB00D462A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72E88F6A24AFEACA00D462A4 /* GoogleService-Info.plist */; };
 		72E88F6D24AFEB5800D462A4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F6C24AFEB5800D462A4 /* Message.swift */; };
 		72E88F6F24AFEB7100D462A4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F6E24AFEB7100D462A4 /* LoginViewController.swift */; };
 		72E88F7124AFEB7E00D462A4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F7024AFEB7E00D462A4 /* ChatViewController.swift */; };
@@ -45,7 +44,6 @@
 		72E88F6424AFE92400D462A4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		72E88F6624AFE93D00D462A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		72E88F6824AFEA1A00D462A4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		72E88F6A24AFEACA00D462A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		72E88F6C24AFEB5800D462A4 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		72E88F6E24AFEB7100D462A4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		72E88F7024AFEB7E00D462A4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 				72E88F5124AFD63200D462A4 /* Assets.xcassets */,
 				72E88F5324AFD63200D462A4 /* LaunchScreen.storyboard */,
 				72E88F5624AFD63200D462A4 /* Info.plist */,
-				72E88F6A24AFEACA00D462A4 /* GoogleService-Info.plist */,
 				72E88F6624AFE93D00D462A4 /* Constants.swift */,
 			);
 			path = BroApp;
@@ -224,7 +221,6 @@
 			files = (
 				72E88F5524AFD63200D462A4 /* LaunchScreen.storyboard in Resources */,
 				72E88F6224AFDA7E00D462A4 /* MessageCell.xib in Resources */,
-				72E88F6B24AFEACB00D462A4 /* GoogleService-Info.plist in Resources */,
 				72E88F5224AFD63200D462A4 /* Assets.xcassets in Resources */,
 				72E88F5024AFD63000D462A4 /* Main.storyboard in Resources */,
 			);
