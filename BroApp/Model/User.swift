@@ -9,8 +9,9 @@
 import Foundation
 
 struct User {
-    let email: String
-    let username: String
-    let friends: [String]
-    let friendRequests: [String]
+    var email: String
+    var username: String
+    var uid: String
+    var friends: [String]
+    var friendRequests: [String]
 }

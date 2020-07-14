@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="jj1-9l-LFM" customClass="WelcomeViewController" customModule="BroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iv0-GZ-6FR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmI-r5-KZh">
@@ -79,12 +79,12 @@
             </objects>
             <point key="canvasLocation" x="823.1884057971015" y="134.59821428571428"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Bro for Bro-->
         <scene sceneID="EDU-89-VsB">
             <objects>
                 <viewController id="ffs-tJ-OMi" customClass="HomeViewController" customModule="BroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7GZ-VV-SeB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="80" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lzP-Jg-fXl">
@@ -143,7 +143,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vTR-3P-keH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zga-yL-O30">
+                    <navigationItem key="navigationItem" title="Bro for Bro" id="zga-yL-O30">
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="geK-U4-Rp5">
                             <connections>
                                 <action selector="logoutButtonPressed:" destination="ffs-tJ-OMi" id="q1Y-DB-wlc"/>
@@ -160,12 +160,12 @@
             </objects>
             <point key="canvasLocation" x="3014" y="64"/>
         </scene>
-        <!--Friends Table View Controller-->
+        <!--Friends-->
         <scene sceneID="oaf-By-neN">
             <objects>
                 <tableViewController id="g0Y-qt-dFg" customClass="FriendsTableViewController" customModule="BroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FHi-eh-ahl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -183,7 +183,7 @@
                             <outlet property="delegate" destination="g0Y-qt-dFg" id="W0g-uK-qwI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="mdA-WY-tgG">
+                    <navigationItem key="navigationItem" title="Friends" id="mdA-WY-tgG">
                         <barButtonItem key="rightBarButtonItem" title="Add Friends" id="B6G-wy-1cA"/>
                     </navigationItem>
                 </tableViewController>
@@ -196,7 +196,7 @@
             <objects>
                 <viewController id="sXM-Lu-4Ei" customClass="RegisterViewController" customModule="BroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0xS-kT-eGT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNd-w0-CgW">
@@ -326,7 +326,7 @@
             <objects>
                 <viewController id="czi-kn-rVR" customClass="LoginViewController" customModule="BroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RxP-z5-QK8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbN-4z-1Tg" userLabel="EmailView">
@@ -432,7 +432,7 @@
             <objects>
                 <viewController id="DYe-r8-i9r" customClass="ChatViewController" customModule="BroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="15V-df-maf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="npE-mn-gPd">
@@ -609,12 +609,12 @@
             </objects>
             <point key="canvasLocation" x="-86.956521739130437" y="134.59821428571428"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Friend Requests-->
         <scene sceneID="Dpl-dg-W8W">
             <objects>
-                <tableViewController id="z2J-cX-3bs" sceneMemberID="viewController">
+                <tableViewController id="z2J-cX-3bs" customClass="FriendRequestTableViewController" customModule="BroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5yf-vl-Ywk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -632,7 +632,7 @@
                             <outlet property="delegate" destination="z2J-cX-3bs" id="w0I-1z-cmq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="td3-oE-W2t"/>
+                    <navigationItem key="navigationItem" title="Friend Requests" id="td3-oE-W2t"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yVY-XC-2pz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,6 +11,11 @@ import UIKit
 class FriendsTableViewController: UITableViewController {
     
     let friendsArray = ["Complexion","Test username", "Rob"]
+    var user: User? {
+        didSet{
+            print("Set User")
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
