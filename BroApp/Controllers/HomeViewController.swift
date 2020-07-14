@@ -26,8 +26,8 @@ class HomeViewController: UIViewController {
                         self.user.email = doc[K.FStoreUser.email] as! String
                         self.user.username = doc[K.FStoreUser.Username] as! String
                         self.user.uid = doc[K.FStoreUser.uid] as! String
-                        self.user.friends = doc[K.FStoreUser.friends] as! [String]
-                        self.user.friendRequests = doc[K.FStoreUser.friendRequests] as! [String]
+                        self.user.friends = doc[K.FStoreUser.friends] as! [Dictionary<String,String>]
+                        self.user.friendRequests = doc[K.FStoreUser.friendRequests] as! [Dictionary<String,String>]
                     }
                 }
             }

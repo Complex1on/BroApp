@@ -19,8 +19,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var ErrorLabel: UILabel!
     
-    let friends: [String] = []
-    let friendRequests: [String] = []
+    let friends: [Dictionary<String,String>] = []
+    let friendRequests: [Dictionary<String,String>] = []
     
     @IBAction func registerPressed(_ sender: UIButton) {
         if let email = emailTextfield.text, let password = passwordTextfield.text {

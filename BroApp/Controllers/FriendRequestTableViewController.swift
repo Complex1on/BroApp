@@ -9,7 +9,6 @@
 import UIKit
 
 class FriendRequestTableViewController: UITableViewController {
-    let friendRequestArray = ["Complexion","Test username", "testign123"]
     
     var user: User? {
         didSet{
@@ -25,11 +24,11 @@ class FriendRequestTableViewController: UITableViewController {
     
     //MARK: - TableView Data Source Methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return friendRequestArray.count
+        return user?.friendRequests.count ?? 0
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendRequestCell", for: indexPath)
-        cell.textLabel?.text = friendRequestArray[indexPath.row]
+        cell.textLabel?.text = user?.friendRequests[indexPath.row]["username"]
         return cell
     }
 

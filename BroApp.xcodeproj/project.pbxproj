@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B065EE8BFB54C9748E50674 /* Pods_BroApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61137085CBBB4BF1BD1CB2DC /* Pods_BroApp.framework */; };
 		72497A7D24BD4BDF0046E5DB /* FriendRequestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72497A7C24BD4BDF0046E5DB /* FriendRequestTableViewController.swift */; };
+		72497A7F24BD58C10046E5DB /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72497A7E24BD58C10046E5DB /* Friend.swift */; };
 		72E88F4924AFD63000D462A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F4824AFD63000D462A4 /* AppDelegate.swift */; };
 		72E88F4B24AFD63000D462A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E88F4A24AFD63000D462A4 /* SceneDelegate.swift */; };
 		72E88F5024AFD63000D462A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72E88F4E24AFD63000D462A4 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		61137085CBBB4BF1BD1CB2DC /* Pods_BroApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BroApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72497A7C24BD4BDF0046E5DB /* FriendRequestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestTableViewController.swift; sourceTree = "<group>"; };
+		72497A7E24BD58C10046E5DB /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		72E88F4524AFD63000D462A4 /* BroApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BroApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E88F4824AFD63000D462A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72E88F4A24AFD63000D462A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			children = (
 				72E88F6C24AFEB5800D462A4 /* Message.swift */,
 				72E88F7424B199A400D462A4 /* User.swift */,
+				72497A7E24BD58C10046E5DB /* Friend.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72E88F6724AFE93D00D462A4 /* Constants.swift in Sources */,
+				72497A7F24BD58C10046E5DB /* Friend.swift in Sources */,
 				72E88F6124AFDA7E00D462A4 /* MessageCell.swift in Sources */,
 				72E88F7724B2835F00D462A4 /* FriendsTableViewController.swift in Sources */,
 				72E88F6524AFE92400D462A4 /* WelcomeViewController.swift in Sources */,

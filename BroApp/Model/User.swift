@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import Firebase
 
 struct User {
     var email: String
     var username: String
     var uid: String
-    var friends: [String]
-    var friendRequests: [String]
+    var friends: [Dictionary<String,String>]
+    var friendRequests: [Dictionary<String,String>]
+    
 }
