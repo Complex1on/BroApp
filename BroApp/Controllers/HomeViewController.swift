@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         if let id = Auth.auth().currentUser?.uid{
-            db.collection("Users").document(id).getDocument { (querySnapshot, error) in
+            db.collection("Users").document(id).addSnapshotListener { (querySnapshot, error) in
                 if let e = error{
                     print("Error getting user data: \(e)")
                 } else {
@@ -55,14 +55,19 @@ class HomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if (segue.identifier == K.homeFriends) {
             let destinationVC = segue.destination as! FriendsTableViewController
-            destinationVC.user = user
+            destinationVC.user = self.user
+            destinationVC.tableView.reloadData()
         }
         
         if(segue.identifier == K.homeFriendRequest) {
+            
             let destinationVC = segue.destination as! FriendRequestTableViewController
-            destinationVC.user = user
+
+            destinationVC.user = self.user
+            destinationVC.tableView.reloadData()
         }
     }
 }

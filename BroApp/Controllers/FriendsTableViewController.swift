@@ -16,11 +16,13 @@ class FriendsTableViewController: UITableViewController {
     var user: User? {
         didSet{
             print("Set User")
+            
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        
     }
     
     //MARK: - tableview data source methods
