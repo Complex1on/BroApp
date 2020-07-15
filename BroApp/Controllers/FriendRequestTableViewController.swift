@@ -92,7 +92,7 @@ class FriendRequestTableViewController: UITableViewController, SwipeTableViewCel
         if var FRarray = user?.friendRequests{
             FRarray.remove(at: index)
             user?.friendRequests = FRarray
-            
+            print(FRarray)
             db.collection("Users").document(user?.uid ?? "").updateData([K.FStoreUser.friendRequests : FRarray]){ err in
                 if let e = err {
                     print("Failed to update data \(e)")
@@ -110,6 +110,8 @@ class FriendRequestTableViewController: UITableViewController, SwipeTableViewCel
         var friendUser = User(email: "", username: "", uid: "", friends: [], friendRequests: [])
         var user = currentUser
         
+        print(currentUser)
+        print(requestUID)
         db.collection("Users").document(requestUID).getDocument { (document, error) in
             if let doc = document{
                 if let data = doc.data() {
@@ -118,21 +120,25 @@ class FriendRequestTableViewController: UITableViewController, SwipeTableViewCel
                     friendUser.uid = data[K.FStoreUser.uid] as! String
                     friendUser.email = data[K.FStoreUser.email] as! String
                     friendUser.username = data[K.FStoreUser.Username] as! String
-                    
+
                     let friendUserAsFriend = Friend(uid: friendUser.uid, username: friendUser.username)
                     friendUser.friends.append(friendUserAsFriend.getDict())
-                    
+
                     let userAsFriend = Friend(uid: user.uid, username: user.username)
                     user.friends.append(userAsFriend.getDict())
+                    
+                    print(friendUser.friends)
+                    print(user.friends)
+                    self.db.collection("Users").document(user.uid).updateData([K.FStoreUser.friends: user.friends])
+                    self.db.collection("Users").document(friendUser.uid).updateData([K.FStoreUser.friends: friendUser.friends])
                 }
-                
+
             } else {
                 print("doc does not exist")
             }
         }
+
         
-        db.collection("Users").document(user.uid).updateData([K.FStoreUser.friends: user.friends])
-        db.collection("Users").document(friendUser.uid).updateData([K.FStoreUser.friends: friendUser.friends])
         
     }
     
