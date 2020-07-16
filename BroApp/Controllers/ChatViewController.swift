@@ -65,9 +65,17 @@ class ChatViewController: UIViewController {
     }
     
     //MARK: - Bottom Section Buttons
-    @IBAction func broButtonPushed(_ sender: UIButton) {
+    @IBAction func leftBroButtonPushed(_ sender: UIButton) {
         messageTextfield!.text! += "Bro! "
     }
+    
+    @IBAction func middleBroButtonPushed(_ sender: UIButton) {
+        messageTextfield!.text! += "Bro "
+    }
+    @IBAction func rightBroButtonPushed(_ sender: UIButton) {
+        messageTextfield!.text! += "Broooo "
+    }
+    
     @IBAction func sendPressed(_ sender: UIButton) {
         if let messageBody = messageTextfield.text ,let messageSender = Auth.auth().currentUser?.uid{
             db.collection("All Messages").document(convoID ?? "").collection("Messages").addDocument(data: [K.FStore.senderField: messageSender,

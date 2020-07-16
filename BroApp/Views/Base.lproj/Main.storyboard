@@ -432,7 +432,8 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="npE-mn-gPd">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="BrandLightBlue"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbY-Jc-Auj">
                                 <rect key="frame" x="0.0" y="608" width="414" height="166"/>
@@ -474,7 +475,7 @@
                                                             <color key="titleColor" name="BrandLightPurple"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="broButtonPushed:" destination="DYe-r8-i9r" eventType="touchUpInside" id="ebu-JZ-me3"/>
+                                                            <action selector="leftBroButtonPushed:" destination="DYe-r8-i9r" eventType="touchUpInside" id="K9k-0c-q5l"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -492,11 +493,11 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzr-be-HfU">
                                                         <rect key="frame" x="25" y="17" width="75" height="45"/>
                                                         <color key="backgroundColor" name="BrandBlue"/>
-                                                        <state key="normal" title="Bro!">
+                                                        <state key="normal" title="Bro">
                                                             <color key="titleColor" name="BrandLightPurple"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="broButtonPushed:" destination="DYe-r8-i9r" eventType="touchUpInside" id="iyx-MH-wY9"/>
+                                                            <action selector="middleBroButtonPushed:" destination="DYe-r8-i9r" eventType="touchUpInside" id="gJt-WC-GRB"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -514,11 +515,11 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQc-wa-veH">
                                                         <rect key="frame" x="25" y="17" width="84" height="45"/>
                                                         <color key="backgroundColor" name="BrandBlue"/>
-                                                        <state key="normal" title="Bro!">
+                                                        <state key="normal" title="Broooo">
                                                             <color key="titleColor" name="BrandLightPurple"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="broButtonPushed:" destination="DYe-r8-i9r" eventType="touchUpInside" id="PIa-NQ-nNp"/>
+                                                            <action selector="rightBroButtonPushed:" destination="DYe-r8-i9r" eventType="touchUpInside" id="YmH-s7-9F6"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
