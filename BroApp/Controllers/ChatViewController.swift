@@ -77,19 +77,24 @@ class ChatViewController: UIViewController {
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
-        if let messageBody = messageTextfield.text ,let messageSender = Auth.auth().currentUser?.uid{
-            db.collection("All Messages").document(convoID ?? "").collection("Messages").addDocument(data: [K.FStore.senderField: messageSender,
-                                                                      K.FStore.bodyField: messageBody,
-                                                                      K.FStore.dateField: Date().timeIntervalSince1970
-                ]) { (error) in
-                if let e = error {
-                    print("There was an issue saving data to firestore, \(e)")
-                } else {
-                    self.messageTextfield.text = ""
-                    print("successfually saved data")
+        if let messageBody = messageTextfield.text{
+            if messageBody != ""{
+                if let messageSender = Auth.auth().currentUser?.uid{
+                    db.collection("All Messages").document(convoID ?? "").collection("Messages").addDocument(data: [K.FStore.senderField: messageSender,
+                                                                              K.FStore.bodyField: messageBody,
+                                                                              K.FStore.dateField: Date().timeIntervalSince1970
+                        ]) { (error) in
+                        if let e = error {
+                            print("There was an issue saving data to firestore, \(e)")
+                        } else {
+                            self.messageTextfield.text = ""
+                            print("successfually saved data")
+                        }
+                    }
                 }
             }
         }
+        
     }
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
