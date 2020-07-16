@@ -18,6 +18,12 @@ class ChatViewController: UIViewController {
     
     var messages: [Message] = []
     
+    var convoID: String? {
+        didSet{
+            print("convo Id set")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -29,7 +35,7 @@ class ChatViewController: UIViewController {
     //MARK: - Load Messages from db
     func loadMessages() {
         
-        db.collection(K.FStore.collectionName)
+        db.collection("All Messages").document(convoID ?? "").collection("Messages")
             .order(by: K.FStore.dateField)
             .addSnapshotListener { (querySnapshot, error) in
                 self.messages = []
@@ -63,8 +69,8 @@ class ChatViewController: UIViewController {
         messageTextfield!.text! += "Bro! "
     }
     @IBAction func sendPressed(_ sender: UIButton) {
-        if let messageBody = messageTextfield.text ,let messageSender = Auth.auth().currentUser?.email{
-            db.collection(K.FStore.collectionName).addDocument(data: [K.FStore.senderField: messageSender,
+        if let messageBody = messageTextfield.text ,let messageSender = Auth.auth().currentUser?.uid{
+            db.collection("All Messages").document(convoID ?? "").collection("Messages").addDocument(data: [K.FStore.senderField: messageSender,
                                                                       K.FStore.bodyField: messageBody,
                                                                       K.FStore.dateField: Date().timeIntervalSince1970
                 ]) { (error) in
@@ -101,23 +107,23 @@ extension ChatViewController: UITableViewDataSource{
         let message = messages[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
-//        cell.label.text = message.body
-//
-//        //message from current user
-//        if message.sender == Auth.auth().currentUser?.email {
-//
-//            cell.leftImageView.isHidden = true
-//            cell.rightImageView.isHidden = false
-//            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.lightPurple)
-//            cell.label.textColor = UIColor(named: K.BrandColors.purple)
-//        }
-//        else {
-//
-//            cell.leftImageView.isHidden = false
-//            cell.rightImageView.isHidden = true
-//            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.purple)
-//            cell.label.textColor = UIColor(named: K.BrandColors.lightPurple)
-//        }
+        cell.label.text = message.body
+
+        //message from current user
+        if message.sender == Auth.auth().currentUser?.uid {
+
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.lightPurple)
+            cell.label.textColor = UIColor(named: K.BrandColors.purple)
+        }
+        else {
+
+            cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.purple)
+            cell.label.textColor = UIColor(named: K.BrandColors.lightPurple)
+        }
         
         
         return cell

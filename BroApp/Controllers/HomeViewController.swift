@@ -72,23 +72,3 @@ class HomeViewController: UIViewController {
     }
 }
 
-        //TESTING QUERYING FOR A DIFFERENT USER
-//        db.collection("Users").whereField("Username", isEqualTo: "Complexion")
-//            .getDocuments() { (querySnapshot, err) in
-//                if let err = err {
-//                    print("Error getting documents: \(err)")
-//                } else {
-//                    if let snapshotDocuments = querySnapshot?.documents {
-//                        for doc in snapshotDocuments{
-//                            let data = doc.data()
-//                            let id = doc.documentID
-//                            print(id)
-//                            print(data["Username"] as! String)
-//                            for test in data {
-//                                print(test)
-//                            }
-//
-//                        }
-//                    }
-//                }
-//        }

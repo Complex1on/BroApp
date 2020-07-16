@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="jj1-9l-LFM" customClass="WelcomeViewController" customModule="BroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iv0-GZ-6FR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmI-r5-KZh">
@@ -84,11 +84,11 @@
             <objects>
                 <viewController id="ffs-tJ-OMi" customClass="HomeViewController" customModule="BroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7GZ-VV-SeB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="80" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lzP-Jg-fXl">
-                                <rect key="frame" x="125.5" y="303" width="163" height="202"/>
+                                <rect key="frame" x="125.5" y="343" width="163" height="122"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtK-AX-mT6">
                                         <rect key="frame" x="0.0" y="0.0" width="163" height="42"/>
@@ -110,17 +110,6 @@
                                         </state>
                                         <connections>
                                             <action selector="friendRequestButtonPushed:" destination="ffs-tJ-OMi" eventType="touchUpInside" id="zKt-1H-Q13"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGM-UJ-AV9">
-                                        <rect key="frame" x="0.0" y="160" width="163" height="42"/>
-                                        <color key="backgroundColor" name="BrandPurple"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="Messages">
-                                            <color key="titleColor" name="BrandLightPurple"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="messagesButtonPushed:" destination="ffs-tJ-OMi" eventType="touchUpInside" id="33N-RW-QSl"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -151,7 +140,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="DYe-r8-i9r" kind="show" identifier="HomeToChat" id="rGh-B2-8UN"/>
                         <segue destination="g0Y-qt-dFg" kind="show" identifier="HomeToFriends" id="w6A-ig-4Ay"/>
                         <segue destination="z2J-cX-3bs" kind="show" identifier="HomeToFriendRequest" id="KvE-G0-IlA"/>
                     </connections>
@@ -165,7 +153,7 @@
             <objects>
                 <tableViewController id="g0Y-qt-dFg" customClass="FriendsTableViewController" customModule="BroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FHi-eh-ahl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -190,6 +178,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="DYe-r8-i9r" kind="show" identifier="FriendsToChat" id="QoA-47-ouy"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ih4-cl-y5F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -200,7 +191,7 @@
             <objects>
                 <viewController id="sXM-Lu-4Ei" customClass="RegisterViewController" customModule="BroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0xS-kT-eGT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNd-w0-CgW">
@@ -330,7 +321,7 @@
             <objects>
                 <viewController id="czi-kn-rVR" customClass="LoginViewController" customModule="BroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RxP-z5-QK8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbN-4z-1Tg" userLabel="EmailView">
@@ -436,7 +427,7 @@
             <objects>
                 <viewController id="DYe-r8-i9r" customClass="ChatViewController" customModule="BroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="15V-df-maf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="npE-mn-gPd">
@@ -587,7 +578,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cBm-qO-X0r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3013" y="1189"/>
+            <point key="canvasLocation" x="5781" y="-149"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dZ3-Cl-rtU">
@@ -618,7 +609,7 @@
             <objects>
                 <tableViewController id="z2J-cX-3bs" customClass="FriendRequestTableViewController" customModule="BroApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5yf-vl-Ywk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>

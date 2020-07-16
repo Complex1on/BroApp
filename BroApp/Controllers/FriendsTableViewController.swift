@@ -36,6 +36,19 @@ class FriendsTableViewController: UITableViewController {
         return cell
     }
     
+    //MARK: - Tableview delegate methods
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: K.friendsChat, sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! ChatViewController
+        
+        if let indexPath = tableView.indexPathForSelectedRow{
+            destinationVC.convoID = chatUID(curr: user?.uid ?? "", friend: user?.friends[indexPath.row]["uid"] ?? "")
+        }
+        
+    }
+    
     //MARK: - Add Friend Funtionality
     // Description: Input email from a UIalert, finds db doc of that user, appends to that user's friend request array, outputs UIalert success or failure
     @IBAction func addFriendButtonPressed(_ sender: UIBarButtonItem) {
@@ -84,14 +97,8 @@ class FriendsTableViewController: UITableViewController {
         present(alert,animated: true,completion: nil)
     }
     
-    //MARK: - Alert Functions
-    func alertUser(t:String, m: String){
-        let failedAlert = UIAlertController(title: t, message: m, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        failedAlert.addAction(action)
-        self.present(failedAlert,animated: true,completion: nil)
-    }
     
+    //MARK: - Validation
     func validFriendRequest(currentUser: User, foundUser: User) {
         let userAsFriend = Friend(uid: user?.uid ?? "", username: user?.username ?? "")
         
@@ -130,5 +137,22 @@ class FriendsTableViewController: UITableViewController {
             }
         }
         
+    }
+    
+    //MARK: - Alert Function
+    func alertUser(t:String, m: String){
+        let failedAlert = UIAlertController(title: t, message: m, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        failedAlert.addAction(action)
+        self.present(failedAlert,animated: true,completion: nil)
+    }
+    
+    //MARK: - Utility function
+    func chatUID(curr: String, friend: String) -> String {
+        if(curr < friend){
+            return curr + friend
+        }else {
+            return friend + curr
+        }
     }
 }

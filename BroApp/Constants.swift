@@ -16,6 +16,8 @@ struct K {
     static let homeChatSegue = "HomeToChat"
     static let homeFriends = "HomeToFriends"
     static let homeFriendRequest = "HomeToFriendRequest"
+    static let friendsChat = "FriendsToChat"
+    
     struct BrandColors {
         static let purple = "BrandPurple"
         static let lightPurple = "BrandLightPurple"

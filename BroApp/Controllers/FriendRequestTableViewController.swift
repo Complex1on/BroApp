@@ -120,15 +120,14 @@ class FriendRequestTableViewController: UITableViewController, SwipeTableViewCel
                     friendUser.uid = data[K.FStoreUser.uid] as! String
                     friendUser.email = data[K.FStoreUser.email] as! String
                     friendUser.username = data[K.FStoreUser.Username] as! String
-
-                    let friendUserAsFriend = Friend(uid: friendUser.uid, username: friendUser.username)
-                    friendUser.friends.append(friendUserAsFriend.getDict())
-
-                    let userAsFriend = Friend(uid: user.uid, username: user.username)
-                    user.friends.append(userAsFriend.getDict())
                     
-                    print(friendUser.friends)
-                    print(user.friends)
+                    let userAsFriend = Friend(uid: user.uid, username: user.username)
+                    let friendUserAsFriend = Friend(uid: friendUser.uid, username: friendUser.username)
+                    
+                    friendUser.friends.append(userAsFriend.getDict())
+                    user.friends.append(friendUserAsFriend.getDict())
+                    
+
                     self.db.collection("Users").document(user.uid).updateData([K.FStoreUser.friends: user.friends])
                     self.db.collection("Users").document(friendUser.uid).updateData([K.FStoreUser.friends: friendUser.friends])
                 }
@@ -149,21 +148,9 @@ class FriendRequestTableViewController: UITableViewController, SwipeTableViewCel
         }else {
             convoUID = friendUID + currUID
         }
-        db.collection("Messages").document(convoUID).setData(["convo" : []])
+        db.collection("All Messages").document(convoUID).setData(["user1" : currUID, "user2" : friendUID])
         
     }
     
-    func updateData(){
-        db.collection("Users").document(user?.uid ?? "").getDocument { (doc, error) in
-            if let e = error{
-                print(e)
-            }else{
-                if let data = doc?.data(){
-                    self.user?.friends = data[K.FStoreUser.friends] as! [Dictionary<String,String>]
-                    self.user?.friendRequests = data[K.FStoreUser.friendRequests] as! [Dictionary<String,String>]
-                }
-            }
-        }
-    }
 
 }
